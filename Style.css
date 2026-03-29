@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    /* Added a gradient tint so you can actually read the white text */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0.3) 80%), 
+                url('4.jpeg'); 
+                animation: backgroundAnimation 10s ease-in-out infinite;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes backgroundAnimation {
+    0%{ background-image: url('4.jpeg');}
+    20%{ background-image: url('10.jpeg');}
+    40%{ background-image: url('8.jpeg');}
+    60%{ background-image: url('12.jpeg');}
+    80%{ background-image: url('6.jpeg');}
+    100%{ background-image: url('4.jpeg');}
+
+}
+
+.navbar {
+    width: 1200px;
+    height: 85px;
+    margin: auto;
+    display: flex;       /* Aligns children in a row */
+    align-items: center; /* Centers them vertically */
+}
+
+.icon {
+    margin-right: 50px; /* Space between logo and menu */
+}
+
+.logo {
+    color: rgb(153, 32, 123);
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.menu {
+    margin-right: auto; /* Pushes the search bar to the far right */
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+
+ul li {
+    padding-left: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(178, 57, 130);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.search {
+    display: flex;
+}
+
+.srch {
+    font-family: 'Times New Roman', serif;
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(153, 32, 123);
+    border-right: none;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+}
+
+.btn {
+    width: 80px;
+    height: 40px;
+    background: rgb(153, 32, 123);
+    border: 2px solid rgb(153, 32, 123);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: rgb(153, 32, 123);
+}
+
+/* Content Area */
+.content {
+    width: 1200px;
+    margin: auto;
+    color: white;
+}
+
+.content h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 55px;
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    cursor: default;
+
+}
+.content h1:hover {
+    transform: scale(1.05);
+    color: rgb(153, 32, 123);
+}
+
+.content span {
+    color: rgb(153, 32, 123);
+}
+
+.par {
+    width: 700px;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    letter-spacing: 1.2px;
+    line-height: 28px;
+}
+
+.cn {
+    width: 160px;
+    height: 45px;
+    background: rgb(153, 32, 123);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.cn a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cn:hover {
+    background: white;
+    transform: scale(1.15);
+    box-shadow:0px 10px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.cn:hover a {
+    color: rgb(153, 32, 123);
+}
+
+.form {
+    width: 300px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
+    position: absolute;
+    top: 300px;
+    left: 1070px;
+    border-radius: 10px;
+    border-color: rgb(180, 33, 155);
+    padding: 25px;
+}
+.form h2 {
+    width: 240px;
+    font-family: 'Times New Roman', serif;
+    color: rgb(153, 32, 123);
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    margin: 2px;
+    border-radius: 10px;
+    padding: 8px;
+
+}
+.form input {
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid rgb(153, 32, 123);
+    border-top: 1px solid rgb(153, 32, 123);
+    border-right: 1px solid rgb(153, 32, 123);
+    border-left: 1px solid rgb(153, 32, 123);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-family: 'Times New Roman', serif;
+    outline: none;
+}   
+.form input:focus{
+    outline: none;
+
+}
+::placeholder {
+    color: white;
+    font-family: 'Times New Roman', serif;
+    opacity: 0.7;
+}
+.btnn {
+    width: 100%;
+    height: 40px;
+    background: rgb(153, 32, 123);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.btnn:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(153, 32, 123);
+    transform: scale(1.05);
+}
+.btnn a:link,a:visited, a:hover, a:active{
+    text-decoration: none;
+    color: rgb(199, 53, 189);
+    font-weight: bold;
+}   
+.form .link {
+    font-family: 'Times New Roman', serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a {
+    color: rgb(153, 32, 123);
+    text-decoration: none;
+}  
+.liw {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
